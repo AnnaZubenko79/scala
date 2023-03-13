@@ -149,11 +149,11 @@ var x = 0
     x += i * i
 println(x)
 
-  val p = Array("Fox", "jumped", "over", "me")
-  for (s <- p) {
-    println(s"Word $s")
-  }
-
+//  val p = Array("Fox", "jumped", "over", "me")
+//  for (s <- p) {
+//    println(s"Word $s")
+//  }
+//
 
 
 //  val myMap = Map("a" -> 42, "b" -> 43)
