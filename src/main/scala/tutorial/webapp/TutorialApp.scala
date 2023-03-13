@@ -156,13 +156,13 @@ object TutorialApp {
 
 
 
-  val myMap = Map("a" -> 42, "b" -> 43)
-  def getMapValue(t: String): String =
-    myMap.get(t).map("Value found: " + _).getOrElse("No value found")
-  println(getMapValue("a"))
-  println(getMapValue("c"))
-
-
+//  val myMap = Map("a" -> 42, "b" -> 43)
+//  def getMapValue(t: String): String =
+//    myMap.get(t).map("Value found: " + _).getOrElse("No value found")
+//  println(getMapValue("a"))
+//  println(getMapValue("c"))
+//
+//
 
 
 
