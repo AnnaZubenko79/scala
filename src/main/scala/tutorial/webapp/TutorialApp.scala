@@ -139,21 +139,21 @@ object TutorialApp {
   //  )
 
 
-//  render(dom.document.querySelector(("#appContainer")), rootElement)
-//
-//  trait Modifier[-El] {
-//    def apply(element: El): Unit
-//  }
-//var x = 0
-//  for (i <- 0 until 100)
-//    x += i * i
-//println(x)
-//
+  render(dom.document.querySelector(("#appContainer")), rootElement)
+
+  trait Modifier[-El] {
+    def apply(element: El): Unit
+  }
+var x = 0
+  for (i <- 0 until 100)
+    x += i * i
+println(x)
+
 //  val p = Array("Fox", "jumped", "over", "me")
 //  for (s <- p) {
 //    println(s"Word $s")
 //  }
-
+//
 
 
 //  val myMap = Map("a" -> 42, "b" -> 43)
@@ -162,7 +162,7 @@ object TutorialApp {
 //  println(getMapValue("a"))
 //  println(getMapValue("c"))
 //
-//
+
 
 
 
