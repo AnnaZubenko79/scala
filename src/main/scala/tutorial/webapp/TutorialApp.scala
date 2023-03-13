@@ -92,13 +92,13 @@ object TutorialApp {
 
 
 
-  //var currentValue  = "world"
-  //val nameVar = Var(currentValue)
-  //  var currentValue1  = "1"
-  //  val nameVar1 = Var(currentValue1)
-  //  val inputCaption = span("First & last name:")
-  //  val inputMods = Seq(typ := "text", defaultValue := "Me")
-  //  def TextInput(): Input = input(typ := "text")
+  var currentValue  = "world"
+  val nameVar = Var(currentValue)
+    var currentValue1  = "1"
+    val nameVar1 = Var(currentValue1)
+    val inputCaption = span("First & last name:")
+    val inputMods = Seq(typ := "text", defaultValue := "Me")
+    def TextInput(): Input = input(typ := "text")
 
 
   //  val rootElement = div(
