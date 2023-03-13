@@ -26,46 +26,46 @@ object TutorialApp {
   }
 
 
-//  def Counter(label: String, initialStep : Int): HtmlElement = {
-//    val allowedSteps = List(1, 2, 3, 5, 10)
-//
-//    val stepVar = Var(initialStep)
-//
-//    val diffBus = new EventBus[Int]
-//
-//    val $count: Signal[Int] = diffBus.events.foldLeft(initial = 0)(_ + _)
-//
-//    div(
-//      p(
-//        "Step: ",
-//        select(
-//          value <-- stepVar.signal.map(_.toString),
-//          onChange.mapToValue.map(_.toInt) --> stepVar,
-//          allowedSteps.map { step =>
-//            option(value := step.toString, step)
-//          }
-//        )
-//      ),
-//      p(
-//        label + ": ",
-//        b(child.text <-- $count),
-//        " ",
-//        // Two different ways to get stepVar's value:
-//        button(
-//          "–",
-//          onClick.mapTo(-1 * stepVar.now()) --> diffBus
-//        ),
-//        button(
-//          "+",
-//          inContext(_.events(onClick).sample(stepVar.signal) --> diffBus)
-//        )
-//      )
-//    )
-//  }
-//    val newElem = div(
-//      h1("Let's count"),
-//      Counter("Sheep", 3)
-//    )
+  def Counter(label: String, initialStep : Int): HtmlElement = {
+    val allowedSteps = List(1, 2, 3, 5, 10)
+
+    val stepVar = Var(initialStep)
+
+    val diffBus = new EventBus[Int]
+
+    val $count: Signal[Int] = diffBus.events.foldLeft(initial = 0)(_ + _)
+
+    div(
+      p(
+        "Step: ",
+        select(
+          value <-- stepVar.signal.map(_.toString),
+          onChange.mapToValue.map(_.toInt) --> stepVar,
+          allowedSteps.map { step =>
+            option(value := step.toString, step)
+          }
+        )
+      ),
+      p(
+        label + ": ",
+        b(child.text <-- $count),
+        " ",
+        // Two different ways to get stepVar's value:
+        button(
+          "–",
+          onClick.mapTo(-1 * stepVar.now()) --> diffBus
+        ),
+        button(
+          "+",
+          inContext(_.events(onClick).sample(stepVar.signal) --> diffBus)
+        )
+      )
+    )
+  }
+    val newElem = div(
+      h1("Let's count"),
+      Counter("Sheep", 3)
+    )
 //
 //
 //  val newVal = Var(initial = "Anna")
