@@ -162,17 +162,9 @@ object TutorialApp {
 //  println(getMapValue("a"))
 //  println(getMapValue("c"))
 
-  val myMap = Map("a" -> 42, "b" -> 43)
 
-  def getMapValue(s: String): String =
-    myMap get s match
 
-  case Some(s)
-  => "Value found: " + s
-  case None => "No value found"
 
-  getMapValue("a") // "Value found: 42"
-  getMapValue("c")
 
 }
 
