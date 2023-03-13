@@ -33,3 +33,8 @@ bin/
 .netlify
 .env
 .java-version
+/package.json
+/package-lock.json
+/build.sbt
+/project/build.properties
+/project/plugins.sbt
