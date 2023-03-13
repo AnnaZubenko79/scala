@@ -12,19 +12,19 @@ object TutorialApp {
     println("Hello")
   }
 
-  //def Counter(label: String): Div = {
-  //  val diffBus = new EventBus[Int]
-  //  val diffStream = diffBus.events
-  //  val $count: Signal[Int] = diffStream.foldLeft(initial = 0)(_ + _)
-  //
-  // div(
-  //    label + ": ",
-  //    b(child.text <-- $count),
-  //    button("-", onClick.mapTo(-1) --> diffBus),
-  //    button("+", onClick.mapTo(+1) --> diffBus),
-  //  )
-  //}
-  //
+  def Counter(label: String): Div = {
+    val diffBus = new EventBus[Int]
+    val diffStream = diffBus.events
+    val $count: Signal[Int] = diffStream.foldLeft(initial = 0)(_ + _)
+
+   div(
+      label + ": ",
+      b(child.text <-- $count),
+      button("-", onClick.mapTo(-1) --> diffBus),
+      button("+", onClick.mapTo(+1) --> diffBus),
+    )
+  }
+
 
 //  def Counter(label: String, initialStep : Int): HtmlElement = {
 //    val allowedSteps = List(1, 2, 3, 5, 10)
@@ -92,16 +92,16 @@ object TutorialApp {
 
 
 
-  var currentValue  = "world"
-  val nameVar = Var(currentValue)
-    var currentValue1  = "1"
-    val nameVar1 = Var(currentValue1)
-    val inputCaption = span("First & last name:")
-    val inputMods = Seq(typ := "text", defaultValue := "Me")
-    def TextInput(): Input = input(typ := "text")
+//  var currentValue  = "world"
+//  val nameVar = Var(currentValue)
+//    var currentValue1  = "1"
+//    val nameVar1 = Var(currentValue1)
+//    val inputCaption = span("First & last name:")
+//    val inputMods = Seq(typ := "text", defaultValue := "Me")
+//    def TextInput(): Input = input(typ := "text")
 
 
-  //  val rootElement = div(
+    val rootElement = div()
   //    input(
   //      cls := "NameInput",
   //      placeholder := "Enter your name",
@@ -144,10 +144,10 @@ object TutorialApp {
   trait Modifier[-El] {
     def apply(element: El): Unit
   }
-var x = 0
-  for (i <- 0 until 100)
-    x += i * i
-println(x)
+//var x = 0
+//  for (i <- 0 until 100)
+//    x += i * i
+//println(x)
 
 //  val p = Array("Fox", "jumped", "over", "me")
 //  for (s <- p) {
